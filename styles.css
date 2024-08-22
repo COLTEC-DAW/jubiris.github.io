@@ -1,0 +1,112 @@
+﻿/* Definição das fontes */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão para o texto */
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', serif; /* Fonte para títulos */
+}
+
+/* Paleta de cores */
+:root {
+    --cor-principal: #19747E; /* Azul */
+    --cor-secundaria: #A9D6E5; /* Verde */
+    --cor-destaque: #e74c3c; /* Vermelho */
+}
+
+/* Estilo do menu */
+.menu {
+    background-color: var(--cor-secundaria);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique sobre o conteúdo */
+}
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around; /* Distribui os itens horizontalmente */
+    }
+
+        .menu ul li {
+            display: inline;
+        }
+
+            .menu ul li a {
+                display: block;
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Menu vertical em dispositivos móveis */
+    }
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Contraste entre seções */
+.cv-container {
+    background-color: #f9f9f9; /* Fundo padrão do conteúdo */
+}
+
+.cv-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #D1E8E2 /* Fundo branco para seções */
+}
+
+    .cv-section:nth-child(even) {
+        background-color: #E2E2E2; /* Fundo alternado para melhor legibilidade */
+    }
+
+/* Alinhamento vertical de elementos */
+.cv-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .cv-header img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .cv-header .contact {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+        .cv-header .contact p {
+            margin-bottom: 5px;
+        }
+
+.cv-section .education .school {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 480px) {
+    .cv-header {
+        text-align: left; /* Ajusta o texto da apresentação para a esquerda */
+    }
+}
+
+/* Estilos adicionais conforme necessário */
+
